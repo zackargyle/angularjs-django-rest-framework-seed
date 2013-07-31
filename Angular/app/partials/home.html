@@ -1,18 +1,9 @@
   <!-- Home Partial -->
-<div style="margin-left: 5%">
+<div style="margin-left:5%">
 
   <h2>AngularJS Django-Rest-Framework Seed</h2>
 
-  <div id="login" ng-hide="users.length">
-    <form ng-submit="getToken()">
-      <label>Username</label>
-      <input type="text" ng-model="username">
-      <label>Password</label>
-      <input type="password" ng-model="password">
-      <br>
-      <input type="submit">
-    </form>
-  </div>
+  <div login></div>
 
   <table ng-show="users.length" cellspacing="5">
     <tr align="left">
