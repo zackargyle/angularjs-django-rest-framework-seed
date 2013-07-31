@@ -1,0 +1,43 @@
+  <!-- Home Partial -->
+<div style="margin-left: 5%">
+
+  <h2>AngularJS Django-Rest-Framework Seed</h2>
+
+  <div id="login" ng-hide="users.length">
+    <form ng-submit="getToken()">
+      <label>Username</label>
+      <input type="text" ng-model="username">
+      <label>Password</label>
+      <input type="password" ng-model="password">
+      <br>
+      <input type="submit">
+    </form>
+  </div>
+
+  <table ng-show="users.length" cellspacing="5">
+    <tr align="left">
+      <th>ID</th>
+      <th>Username</th>
+    </tr>
+    <tr ng-repeat="user in users">
+      <td>{{user.id}}</td>
+      <td>{{user.username}}</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <table ng-show="addresses.length" cellspacing="5">
+    <tr align="left">
+      <th>Street</th>
+      <th>City</th>
+      <th>State</th>
+    </tr>
+    <tr ng-repeat="address in addresses">
+      <td>{{address.street}}</td>
+      <td>{{address.city}}</td>
+      <td>{{address.state}}</td>
+    </tr>
+  </table>
+
+</div>
