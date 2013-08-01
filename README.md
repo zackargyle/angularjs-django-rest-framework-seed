@@ -1,7 +1,12 @@
 angularjs-django-rest-framework-seed
 ====================================
 
-Seed for a cross domain Angularjs/Django Rest Framework Application
+Seed for a cross domain Angularjs / Django Rest Framework Application
+
+    INCLUDED
+        - RESTFUL API service for User and Address models
+        - Login to obtain django token
+        - Angularjs display of data pulled from Django Rest API
 
 After cloning down the repository:
 
@@ -29,7 +34,7 @@ Zack Argyle
 
 <br>
 
-NOTES: <br>
+    NOTES: 
     
     - I highly suggest using a virtualenv as to not mess with in-built dependencies
 
