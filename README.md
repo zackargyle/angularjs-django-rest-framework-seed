@@ -13,6 +13,10 @@ After cloning down the repository:
 1.  pip install fabric
 2.	cd Django
 3.  fab install:version=2.7 (or whatever version of python you are using)
+4.  You just installed Django's auth system, which means you don't have any superusers defined.
+    Would you like to create one now? no
+       - The authtoken table is not created yet, so be sure to respond no to this request.
+5.  Setup your superuser
 
 Bam, you're good to go.
 
