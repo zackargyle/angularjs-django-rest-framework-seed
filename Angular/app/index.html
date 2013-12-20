@@ -7,14 +7,17 @@
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/bootstrap-responsive.min.css"/>
 </head>
-<body>
+<body auth-application>
 
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   <script src="lib/angular/angular.js"></script>
 
+  <!-- Login Form -->
+  <div id="login-holder">
+    <div login></div>
+  </div>
+
   <div id="main">
-    <div ng-view></div>
+    <div ng-view ></div>
   </div>
 
   <script src="js/constants.js"></script>
@@ -24,7 +27,9 @@
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
   <script src="js/ui-bootstrap-tpls-0.3.0.js"></script>
+  <script src="lib/http-auth-interceptor.js"></script>
   <script src="lib/angular/angular-resource.js"></script>
+  <script src="lib/angular/angular-cookies.js"></script>
 
 </body>
 </html>

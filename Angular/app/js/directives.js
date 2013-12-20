@@ -2,8 +2,37 @@
 
 /* Directives */
 
-angular.module('angularProject.directives', [])
- 	.directive('login', function($http, $rootScope) {
+angular.module('angularProject.directives', ['http-auth-interceptor'])
+	.directive('authApplication', function($cookieStore, $http, $rootScope) {
+ 		return {
+ 			restrict: 'A',
+    		link: function (scope, elem, attrs) {
+
+    		  var main = document.getElementById("main");
+    		  var login = document.getElementById("login-holder");
+
+    		  var applyLogin = function(good) {
+    		  	if (good) {
+	    		  	main.style.display = "block";
+	        		login.style.display = "none";
+	        	} else {
+	        		main.style.display = "none";
+	        		login.style.display = "block";
+	        	}
+    		  }
+
+          scope.$on('event:auth-loginRequired', function () {
+            applyLogin(false)
+          });
+
+          scope.$on('event:auth-loginConfirmed', function () {
+            applyLogin(true);
+          });
+
+    		}
+ 		}
+ 	})
+ 	.directive('login', function($http, $cookieStore, authService) {
  		return {
  			restrict: 'A',
  			template: " <form> " +
@@ -14,10 +43,6 @@ angular.module('angularProject.directives', [])
       						"<br>" +
       						"<input type='submit'>" +
     					"</form>",
-    		scope: {
-    			username:'&',
-    			password:'&'
-    		},
  			link: function(scope, elem, attrs) {
 
  				elem.bind('submit', function() {
@@ -30,9 +55,9 @@ angular.module('angularProject.directives', [])
 					//$http.post(constants.serverAddress + "api-token-auth", user_data)
 		            $http.post("http://localhost:8001/api-token-auth/", user_data)
 		                .success(function(response) {
+		                	$cookieStore.put('djangotoken', response.token);
 		                    $http.defaults.headers.common['Authorization'] = 'Token ' + response.token;
-		                    $rootScope.$broadcast('event:login-confirmed');
-		                    elem.slideUp();
+		                    authService.loginConfirmed();
 		            }); 
 
  				});
