@@ -1,6 +1,16 @@
 angularjs-django-rest-framework-seed
 ====================================
 
+** NEW FEATURE **
+```
+I just added my version of how to implement persisted tokens using $cookieStore along side
+Witold Szczerba's http-auth-interceptor. Every request is checked for authentication, and the
+login screen is served if the user is not authenticated. Please let me know how you have 
+implemented this in your projects, I don't assume my way is the only or best way out there.
+
+THANKS
+```
+
 Seed for a cross domain Angularjs / Django Rest Framework Application
 
     INCLUDED
@@ -36,12 +46,6 @@ Afterwards, to see it in action, here is a simple way:
 Please give feedback, or bug fixes.
 
 Zack Argyle
-
-** NEW FEATURE **
-
-I just added my version of how to implement persisted tokens using $cookieStore along side Witold Szczerba's http-auth-interceptor. Every request is checkedPlease let me know how you do have implemented this in your projects, I don't assume my way is the only or best way out there.
-
-THANKS
 
 <br>
 
