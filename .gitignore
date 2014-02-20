@@ -1,0 +1,6 @@
+Angular/node_modules
+Angular/app/bower_components
+*~
+\#*
+.\#*
+*.pyc
