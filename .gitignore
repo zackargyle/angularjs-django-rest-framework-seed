@@ -4,3 +4,4 @@ Angular/app/bower_components
 \#*
 .\#*
 *.pyc
+Django/venv/
