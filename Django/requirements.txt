@@ -8,3 +8,5 @@ ecdsa==0.10
 paramiko==1.12.2
 pycrypto==2.6.1
 wsgiref==0.1.2
+pep8
+pyflakes

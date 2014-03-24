@@ -6,3 +6,4 @@ Angular/app/bower_components
 *.pyc
 Django/venv/
 Django/db.sqlite3
+Django/.coverage
