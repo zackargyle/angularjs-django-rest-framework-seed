@@ -31,14 +31,9 @@ def initialize(version=""):
     local("python%s manage.py migrate rest_framework.authtoken " % version)
     local("python%s manage.py createsuperuser" % version)
 
->>>>>>> Adding test runners and splitting tests in unit/integration/acceptance
 
 @task
 def clean():
-<<<<<<< HEAD
-        """Remove all the .pyc files"""
-        local("find . -name '*.pyc' -print0|xargs -0 rm", capture=False)
-=======
     """Remove all the .pyc files"""
     local("find . -name '*.pyc' -print0|xargs -0 rm", capture=False)
 
