@@ -1,0 +1,12 @@
+Django==1.6.2
+Fabric==1.8.2
+South==0.8.4
+argparse==1.2.1
+django-cors-headers==0.12
+djangorestframework==2.3.12
+ecdsa==0.10
+paramiko==1.12.2
+pycrypto==2.6.1
+wsgiref==0.1.2
+pep8
+pyflakes

@@ -1,10 +1,15 @@
 'use strict';
 
-angular.module('angularProject', ['ui.bootstrap']);
-
-
 // Declare app module and Appendages
-angular.module('angularProject', ['angularProject.filters', 'angularProject.services', 'angularProject.directives', 'angularProject.controllers', 'ngCookies'])
+angular.module('angularProject', [
+  'angularProject.filters',
+  'angularProject.services',
+  'angularProject.directives',
+  'angularProject.controllers',
+  'ngCookies',
+  'ngRoute',
+  'ui.bootstrap'
+])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/home', {

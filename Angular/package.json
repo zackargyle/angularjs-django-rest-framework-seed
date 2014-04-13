@@ -1,0 +1,19 @@
+{
+  "name": "Angular",
+  "version": "0.0.0",
+  "description": "Template project for angular",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "karma": "~0.10.9",
+    "karma-chrome-launcher": "~0.1.2",
+    "bower": "~1.2.8"
+  }
+}

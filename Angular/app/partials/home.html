@@ -1,10 +1,11 @@
-  <!-- Home Partial -->
-<div style="margin-left:5%">
+<!-- Home Partial -->
 
-  <h2>AngularJS Django-Rest-Framework Seed</h2>
 
-  <table ng-show="users.length" cellspacing="5">
-    <tr align="left">
+<h2>AngularJS Django-Rest-Framework Seed</h2>
+
+<div class="container">
+  <table ng-show="users.length" class="table table-stripped">
+    <tr>
       <th>ID</th>
       <th>Username</th>
     </tr>
@@ -13,11 +14,11 @@
       <td>{{user.username}}</td>
     </tr>
   </table>
+</div>
 
-  <br>
-
-  <table ng-show="addresses.length" cellspacing="5">
-    <tr align="left">
+<div class="container">
+  <table ng-show="addresses.length" class="table table-stripped">
+    <tr>
       <th>Street</th>
       <th>City</th>
       <th>State</th>
@@ -28,5 +29,4 @@
       <td>{{address.state}}</td>
     </tr>
   </table>
-
 </div>
